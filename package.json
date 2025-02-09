@@ -1,0 +1,39 @@
+{
+  "type": "module",
+  "name": "kuis-islami-be",
+  "version": "1.0.0",
+  "description": "Backend for kuis islami frontend",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node --watch index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ztrdiamond/kuis-islami.git"
+  },
+  "keywords": [
+    "kuis",
+    "islami",
+    "quiz",
+    "islamic",
+    "trivia",
+    "games",
+    "api",
+    "backend"
+  ],
+  "author": "ZTRdiamond",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ztrdiamond/kuis-islami/issues"
+  },
+  "homepage": "https://github.com/ztrdiamond/kuis-islami#readme",
+  "dependencies": {
+    "axios": "^1.7.9",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "morgan": "^1.10.0"
+  }
+}
