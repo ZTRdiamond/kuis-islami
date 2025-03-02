@@ -37,7 +37,6 @@ body {
   font-family: var(--font-primary);
   background: var(--color-surface-100);
   color: white;
-  display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
@@ -72,6 +71,11 @@ body {
   padding: 15px;
   border-radius: 10px;
   text-align: center;
+}
+
+.question-id {
+  margin-top: .3rem;
+  font-size: .6rem;
 }
 
 .choices {
@@ -143,4 +147,13 @@ body {
 
 .action-button:hover {
   background: var(--color-primary-100);
+}
+
+footer, a, p {
+  color: #fff;
+  margin: .5rem;
+}
+
+.footer {
+  font-size: .8rem;
 }

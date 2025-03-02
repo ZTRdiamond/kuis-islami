@@ -16,7 +16,6 @@ async function fetchQuiz() {
     
     const response = await fetch(apiUrl);
     if (!response.ok) throw new Error("Gagal mengambil data");
-
     quizData = await response.json();
     displayQuestion();
   } catch (error) {
@@ -34,6 +33,10 @@ function displayQuestion() {
   if (!quizData) return;
 
   document.getElementById("questionText").innerText = quizData.question;
+  document.getElementById("questionId").innerText = "ID Soal: " + quizData.id;
+  document.getElementById("reportIssue").addEventListener("click", function() {
+    window.location.href = `https://github.com/ztrdiamond/kuis-islami/issues/new?title=%F0%9F%9B%91+Kesalahan+Pada+Soal+Kuis&body=%F0%9F%9B%91+Kesalahan+pada+Soal+Kuis%0A**%F0%9F%93%8C+ID+Soal:**+${quizData.id}%0A**%E2%9D%8C+Masalah:**+%5BJelaskan+kesalahan,+misalnya+jawaban+salah,+typo,+atau+pertanyaan+tidak+jelas%5D%0A**%E2%9C%85+Saran+Perbaikan:**+%5BBerikan+saran+jawaban+atau+revisi+soal+jika+memungkinkan%5D`;
+  });
 
   document.getElementById("options").innerHTML = quizData.choices
     .map((choice, index) => {
